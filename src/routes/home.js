@@ -14,6 +14,8 @@ const Container = styled.div`
   background-color: black;
   width: 80%;
   height: 80%;
+  font-size: 24px;
+  font-weight: bold;
 `;
 
 export default function Home() {
