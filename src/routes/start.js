@@ -128,10 +128,10 @@ export default function Start() {
                 state: { studentNumber: studentNumber },
               }}
             >
-              <Button type="button">Submit</Button>
+              <Button type="button">Start</Button>
             </Link>
           ) : (
-            <Button type="submit">Submit</Button>
+            <Button type="submit">Start</Button>
           )}
         </Form>
         <div style={{ padding: "30px" }} />
