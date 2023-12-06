@@ -73,7 +73,7 @@ export default function Start() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!consent) {
-      alert("개인정보 처리 동의가 필요합니다.");
+      alert("you must agree to the processing of your personal data.");
       return;
     }
     // 개인정보 동의 데이터 처리 로직
