@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import styled from "styled-components";
 import lottie from "lottie-web";
@@ -21,6 +21,7 @@ const Container = styled.div`
 export default function Home() {
   const location = useLocation();
   const animationContainer = useRef(null);
+  const [randomNumber, setRandomNumber] = useState(null);
 
   useEffect(() => {
     lottie.loadAnimation({
@@ -30,12 +31,16 @@ export default function Home() {
       autoplay: true, // 자동 재생 여부
       path: "https://lottie.host/ae0a77dd-915f-422a-ae24-13b5017bb47b/7s2mvhH0qJ.json", // 애니메이션 파일 경로
     });
+
+    const number = Math.floor(Math.random() * 100) + 1; // 1에서 100 사이의 랜덤 숫자
+    setRandomNumber(number);
   }, []);
 
   return (
     <>
       <Container>
-        Welcome, {location.state.studentNumber} !
+        <div>Welcome, {location.state.studentNumber} !</div>
+        <div>Your number is {randomNumber} </div>
         <div ref={animationContainer} />
       </Container>
     </>
