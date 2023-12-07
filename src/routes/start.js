@@ -36,12 +36,13 @@ const Input = styled.input`
 const Label = styled.label`
   margin-bottom: 5px;
   font-size: 14px;
+  width: 100px;
   /* font-weight: bold; */
 `;
 
 const CheckboxContainer = styled.div`
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   /* margin: 10px; */
 `;
@@ -99,9 +100,20 @@ export default function Start() {
               </Label>
               <Input
                 type="text"
-                id="studentNumber"
+                id="Name"
                 value={studentNumber}
                 onChange={(e) => setStudentNumber(e.target.value)}
+              />
+            </CheckboxContainer>
+            <CheckboxContainer>
+              <Label htmlFor="studentNumber" style={{ fontWeight: "bold" }}>
+                Student ID
+              </Label>
+              <Input
+                type="text"
+                id="studentNumber"
+                // value={studentNumber}
+                // onChange={(e) => setStudentNumber(e.target.value)}
               />
             </CheckboxContainer>
             <CheckboxContainer>
@@ -114,10 +126,15 @@ export default function Start() {
               />
               <Label
                 htmlFor="privacyConsent"
-                style={{ color: "#d9d9d9", borderBottom: "1px solid #d9d9d9" }}
+                style={{
+                  color: "#d9d9d9",
+                  borderBottom: "1px solid #d9d9d9",
+                  width: "100%",
+                  fontSize: "12px",
+                }}
                 onClick={() => setOpen(true)}
               >
-                I agree to the processing of my personal data.
+                I agree to all terms.
               </Label>
             </CheckboxContainer>
           </div>

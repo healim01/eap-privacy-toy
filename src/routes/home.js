@@ -40,7 +40,7 @@ export default function Home() {
     <>
       <Container>
         <div>Welcome, {location.state.studentNumber} !</div>
-        <div>Your number is {randomNumber} </div>
+        <div>Your lucky number is {randomNumber} !</div>
         <div ref={animationContainer} />
       </Container>
     </>
